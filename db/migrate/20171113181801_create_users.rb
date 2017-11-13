@@ -4,9 +4,10 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :first_name
       t.string :last_name
       t.string :email
+      t.string :password_digest
       t.string :instagram_handle
       t.string :instagram_account_link
-      
+
 
 
       t.timestamps

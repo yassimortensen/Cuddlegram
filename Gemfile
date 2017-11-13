@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'nokogiri'
 gem 'restclient'
+gem 'bcrypt'
 
 
 group :development, :test do
