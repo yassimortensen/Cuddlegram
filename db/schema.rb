@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171113203020) do
+=======
+ActiveRecord::Schema.define(version: 20171113211933) do
+>>>>>>> c3a7a88eb9ab0e10cd99d88fde3e245f7d72060f
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -28,7 +32,6 @@ ActiveRecord::Schema.define(version: 20171113203020) do
   end
 
   create_table "pets", force: :cascade do |t|
-    t.string "name"
     t.string "instagram_handle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,6 +48,7 @@ ActiveRecord::Schema.define(version: 20171113203020) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "password_digest"
     t.string "instagram_handle"
     t.string "instagram_account_link"
     t.datetime "created_at", null: false
