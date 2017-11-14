@@ -1,6 +1,14 @@
-<h1> Pet Show Page </h1>
-<h2> <%= @pet.instagram_handle %> <h2>
-<ul>
-  <% @pet.photos.each do |photo| %>
-  <%= link_to image_tag(photo.url), photo_path(photo) %>
+<h1> <%= @pet.instagram_handle %> <h1>
+
+<h3>Cuddlegram Followers:</h3>
+  <% @pet.users.each do |follower| %>
+    <ul>
+      <li><%= link_to follower.instagram_handle, user_path(follower) %></li>
+    </ul>
   <% end %>
+
+<h4>To see <%=@pet.instagram_handle%>'s instagram feed, click <a href="https://www.instagram.com/<%=@pet.instagram_handle%>">here!</a></h4>
+
+<% @pet.photos.each do |photo| %>
+  <%= link_to image_tag(photo.url), photo_path(photo) %>
+<% end %>

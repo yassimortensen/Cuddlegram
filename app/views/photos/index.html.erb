@@ -1,6 +1,8 @@
-<h1> test photo index page </h1>
+<h1> test One Photo For Each Pet </h1>
 
-<% Pet.random_photo_for_each_pet.each do |photo_object| %>
+<% photos = Pet.random_photo_for_each_pet.shuffle %>
+
+<% photos.each do |photo_object| %>
   <%= link_to image_tag(photo_object.url), photo_path(photo_object) %>
   <h4><%= photo_object.pet.instagram_handle %></h4>
 <% end %>

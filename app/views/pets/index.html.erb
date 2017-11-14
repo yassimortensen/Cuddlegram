@@ -1,6 +1,11 @@
-<h1> Pet Index page </h1>
-<ul>
+<h1> All of our Pets! </h1>
+
+
 <% @pets.each do |pet| %>
-<li> <%= pet.instagram_handle %> </li>
+  <% photo = pet.new_photo %>
+  <ul>
+    <h3><li> <%= pet.instagram_handle %><br>
+      <%= link_to image_tag(photo.url), pet_path(pet) %>
+    </li></h3>
+  </ul>
 <% end %>
-</ul>

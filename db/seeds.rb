@@ -1,19 +1,20 @@
 
 pet_usernames = [ #array of all instagram handles
-  "dogs.lovers",
+  "baguetti_spaghetti",
   "loki_the_wolfdog",
+  "pumpkintheraccoon",
+  "moggsy_the_cat",
   "coconutricebear",
+  "ranmathecat",
+  "baxter_the_frenchbulldog",
   "boo.thegolden",
+  "churro_cat",
+  "dogs.lovers",
   "winnithepooch",
+  "moggsy_the_cat",
   "vidarthecorgi",
   "daisycarli_gram",
-  "baxter_the_frenchbulldog",
-  "baguetti_spaghetti",
-  "churro_cat",
-  "ranmathecat",
-  "hiimskunk",
-  "moggsy_the_cat",
-  "sis.twins"
+  "hiimskunk"
 ]
 
 pet_usernames.each do |username| #iterate through the instagram handles

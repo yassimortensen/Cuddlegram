@@ -1,12 +1,22 @@
 class LikesController < ApplicationController
-  before_action :require_action, only: [:index, :show]
+  before_action :require_user, only: [:new]
 
-  def index
-    @likes = Like.all
+  def new
+    @photos = Photo.all
   end
 
-  def show
-    @like = Like.find(params[:id])
-    @photos = @like.photos
+  def create
+    like = Like.new(likes_params)
+    if like.save
+      redirect_to user_path(likes_params[:user_id])
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def likes_params
+    params.require(:like).permit(:user_id, :pet_id)
   end
 end

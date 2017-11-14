@@ -4,7 +4,7 @@ class Pet < ApplicationRecord
   has_many :users, through: :likes
   has_many :comments, through: :photos
 
-  def self.random_photo_for_each_pet
+  def self.random_photo_for_each_pet #returns random photo object for each pet
     self.all.map do |pet|
       pet.photos.shuffle.first
     end

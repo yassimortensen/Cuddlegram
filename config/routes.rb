@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :photos
   resources :comments
-  resources :likes
+  resources :likes, only: [:new, :create]
   resources :pets
   resources :users
   get 'signup' => 'users#new'
