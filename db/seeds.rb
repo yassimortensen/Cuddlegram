@@ -27,5 +27,5 @@ pet_usernames.each do |username| #iterate through the instagram handles
   end
 end
 
-User.create!(first_name: "yassi", last_name: "mortensen", email:"yassi@marvelit.com", password: "mermaids", instagram_handle: "yassi_tiu", instagram_account_link: "https://www.instagram.com/yassi_tiu")
-User.create!(first_name: "mimi", last_name: "rahman", email:"mimi@flatironschool.com", password: "dolphins", instagram_handle: "miimster", instagram_account_link: "https://www.instagram.com/miimster")
+User.create!(first_name: "yassi", last_name: "mortensen", email:"yassi@marvelit.com", password: "mermaids", instagram_handle: "yassi_tiu")
+User.create!(first_name: "mimi", last_name: "rahman", email:"mimi@flatironschool.com", password: "dolphins", instagram_handle: "miimster")

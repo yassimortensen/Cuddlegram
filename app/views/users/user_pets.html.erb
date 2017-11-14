@@ -1,0 +1,6 @@
+<h1> Pets I am following! </h1>
+<ul>
+  <% current_user.pets.each do |pet| %>
+  <li> <%= link_to pet.instagram_handle, pet_path(pet) %> </li>
+  <% end %>
+  </ul
