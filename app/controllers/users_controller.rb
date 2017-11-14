@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+  #before_action :require_action, only: [:index]
+
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
   end
@@ -8,16 +18,21 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Welcome to Cuddlegram"
-      redirect_to '/'
+      redirect_to '/users'
     else
-      flash[:notice] = "Not a valid user!"
+      flash[:notice] = "Error: Sign up failed"
       render :new
     end
   end
 
+  def user_pets
+  end
+
+
 private
   def users_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :instagram_handle)
   end
+
 
 end

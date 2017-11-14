@@ -1,14 +1,16 @@
 <h1> <%= link_to @photo.pet.instagram_handle, pet_path(@photo.pet) %> </h1>
+
 <img src="<%= @photo.url %>">
 
 
 
-<h1> New Comment </h1>
+<h4> Add a Comment </h4>
 
   <%= form_for :comment, url: comments_path do |f| %>
     <%= f.text_area :content %>
     <%= f.hidden_field :photo_id, value: @photo.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
+    <br>
     <%= f.submit "Add a Comment" %>
   <% end %>
 
