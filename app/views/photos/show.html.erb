@@ -15,6 +15,6 @@
 <h4>Comments:</h4>
   <%@photo.comments.each do |comment| %>
     <ul>
-      <li><%= comment.content %></li>
+      <li><%= link_to comment.user.instagram_handle, user_path(comment.user)%> says <%= comment.content %></li>
     </ul>
   <% end %>
