@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       flash[:notice] = "Not a valid user!"
-      redirect_to '/signup'
+      render :new
     end
   end
 

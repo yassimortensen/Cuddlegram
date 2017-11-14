@@ -13,8 +13,7 @@ pet_usernames = [
   "ranmathecat",
   "hiimskunk",
   "moggsy_the_cat",
-  "sis.twins",
-  "littlelordreginald",
+  "sis.twins"
 ]
 
 pet_usernames.each do |username|

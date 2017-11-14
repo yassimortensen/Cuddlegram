@@ -1,0 +1,4 @@
+<h1> Show Comment </h1>
+<p> Content: <%= @comment.content %> </p>
+<p> User First Name <%= @comment.user.first_name %> </p>
+<%= link_to image_tag(@comment.photo.url), photo_path(@comment.photo) %>">
