@@ -15,9 +15,9 @@ before_action :require_user, only: [:new]
   def create
     @comment = Comment.new(comments_params)
     if @comment.save
-      redirect_to photo_path(@comment.photo)
+      redirect_to request.referrer
     else
-      redirect_to 'index'
+      render :new
     end
   end
 

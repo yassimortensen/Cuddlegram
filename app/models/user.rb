@@ -11,6 +11,9 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { in: 6..20 }
 
-
+  def instagram_account_link
+    link = "https://www.instagram.com/#{self.instagram_handle}"
+    link
+  end
 
 end

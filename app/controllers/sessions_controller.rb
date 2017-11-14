@@ -8,10 +8,10 @@ class SessionsController < ApplicationController
    @user = User.find_by_email(params[:session][:email])
    if @user && @user.authenticate(params[:session][:password])
      session[:user_id] = @user.id
-     redirect_to '/'
+     redirect_to '/users'
    else
-     flash[:notice] = "Not a valid user!"
-     redirect_to '/login'
+     flash[:notice] = "Error: Login failed!"
+     render :new
    end
  end
 

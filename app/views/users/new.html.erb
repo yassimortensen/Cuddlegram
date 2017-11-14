@@ -12,6 +12,7 @@
     <%= form_for @user do |f|  %>
       <%= f.text_field :first_name, :placeholder => "first name" %>
       <%= f.text_field :last_name, :placeholder => "last name" %>
+      <%= f.text_field :instagram_handle, :placeholder => "instagram handle" %>
       <%= f.email_field :email, :placeholder => "email address" %>
       <%= f.password_field :password, :placeholder => "password" %>
       <%= f.submit "Sign Up", class: "btn-submit" %>
