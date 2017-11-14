@@ -1,6 +1,9 @@
 <h1> test photo index page </h1>
 
-<% @photos.shuffle.first(5).map do |photo| %>
-<%= link_to image_tag(photo.url), pet_path(photo.pet)%>
 
-<% end %>
+
+<% @photos.map do |photo| %>
+  <%= link_to image_tag(photo.url), photo_path(photo) %>
+    <% photo.pet_id %>
+  <% end %>
+  <% end %>
