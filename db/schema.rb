@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20171114020908) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "password_digest"
     t.string "instagram_handle"
     t.string "instagram_account_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
 
 end

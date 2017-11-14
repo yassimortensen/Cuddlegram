@@ -1,9 +1,6 @@
 <h1> test photo index page </h1>
 
-
-
-<% @photos.map do |photo| %>
-  <%= link_to image_tag(photo.url), photo_path(photo) %>
-    <% photo.pet_id %>
-  <% end %>
-  <% end %>
+<% Pet.random_photo_for_each_pet.each do |photo_object| %>
+  <%= link_to image_tag(photo_object.url), photo_path(photo_object) %>
+  <h4><%= photo_object.pet.instagram_handle %></h4>
+<% end %>
