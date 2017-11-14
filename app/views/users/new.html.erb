@@ -1,7 +1,12 @@
+<ul>
+  <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |error| %>
+    <li> <%= error %> </li>
+    <% end %>
+  <% end %>
+</ul>
 
-<div class= "login">
-  <div class = "container">
-    <div class= "form">
+
     <h3> Create a Cuddlegram Account </h3>
 
     <%= form_for @user do |f|  %>
@@ -12,7 +17,3 @@
       <%= f.submit "Sign Up", class: "btn-submit" %>
       <% end %>
       <br></br>
-
-    </div>
-  </div>
-</div>
