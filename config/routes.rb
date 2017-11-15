@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :users
 
   get 'welcome' => 'static#welcome'
-  get 'cuddling' => 'users#user_pets' 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
 
