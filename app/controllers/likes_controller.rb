@@ -6,11 +6,15 @@ class LikesController < ApplicationController
   end
 
   def create
-    like = Like.new(likes_params)
-    if like.save
+    if Like.find_by(likes_params)
       redirect_to user_path(likes_params[:user_id])
     else
-      render :new
+      like = Like.new(likes_params)
+      if like.save
+        redirect_to user_path(likes_params[:user_id])
+      else
+        render :new
+      end
     end
   end
 
