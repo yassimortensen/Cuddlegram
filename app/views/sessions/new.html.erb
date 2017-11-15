@@ -1,17 +1,21 @@
 <%= flash[:notice] %>
+<br>
 
-<div class="login">
-	<div class="container">
-		<div class="form">
-
-      <h1>Log in</h1>
-
-      <%= form_for(:session, url: login_path) do |f| %>
-        <%= f.email_field :email, :placeholder => "Email" %>
-        <%= f.password_field :password, :placeholder => "Password" %>
-        <%= f.submit "Log in", class: "btn-submit" %>
+<div class="container">
+	<div class="row">
+		<div class="col-6 text-nowrap">
+			<h2 class="form-signin-heading">Log in</h2>
+      	<%= form_for(:session, url: login_path) do |f| %>
+				<div class="form-group">
+					<%= f.email_field :email, :placeholder => "Email" %>
+				</div>
+				<div class="form-group">
+        	<%= f.password_field :password, :placeholder => "Password" %>
+				</div>
+				<div class="form-group">
+        	<%= f.submit "Log in", class: "btn-submit" %>
+				</div>
       <% end %>
-
-    </div>
+		</div>
 	</div>
 </div>
