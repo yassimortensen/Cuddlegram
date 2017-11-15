@@ -2,30 +2,30 @@
 
   <% if current_user %>
 
-      <li class align right="nav-item">
-          <h1><a class="logo text-white"> Cuddlegram </a></h1>
-      </li>
+    <li class align right= "nav-item">
+        <h1><a class="logo text-white"> Cuddlegram </a></h1>
+    </li>
 
-      <li class ="nav-item">
-          <a class="nav-link active text-white" <%= link_to "Profile", users_path  %> </a>
-      </li>
+    <li class ="nav-item">
+      <a class="nav-link active text-white" <%= link_to "Profile", users_path  %> </a>
+    </li>
 
-      <li class ="nav-item">
-          <a class="nav-link active text-white" <%= link_to "Find a Pet", new_like_path  %> </a>
-      </li>
+    <li class ="nav-item">
+        <a class="nav-link active text-white" <%= link_to "Find a Pet", new_like_path  %> </a>
+    </li>
 
-      <li class ="nav-item">
-          <a class="nav-link active text-white" <%= link_to "See All Pets", pets_path  %> </a>
-      </li>
+    <li class ="nav-item">
+        <a class="nav-link active text-white" <%= link_to "See All Pets", pets_path  %> </a>
+    </li>
 
-      <li class ="email">
+    <li class ="email">
           <a class="nav-link disabled text-white"> <%=current_user.email%> </a>
-      </li>
+    </li>
 
     <li class="nav-item">
       <a class="nav-link active text-white" <%= link_to "Log Out", logout_path, method:"delete" %> </a>
     </li>
-
+    
 
     <% else %>
 
