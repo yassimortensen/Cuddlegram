@@ -13,11 +13,44 @@
  *= require_tree .
  *= require_self
  */
+.padding{
+  padding: 10px;
+}
+
+.center-text {
+  padding: 10px;
+  text-align: center;
+}
+
+ .logo {
+   font-family: 'Cookie', cursive;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+
+ .email {
+   padding-top: 10px;
+   padding-left: 210px;
+ }
+
  .everywhere-else {
-   background-color: coral;
+   background-color: #F8F9F9;
+   font-family: 'Comfortaa', cursive;
+   color: #515A5A
  }
 
  .landing-bg {
      background-image: url("https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/20583168_108299806540330_8006561059768893440_n.jpg");
      background-repeat: no-repeat;
+     font-family: 'Comfortaa', cursive;
+     color: #515A5A
+ }
+
+ .nav {
+   background-color: #73C6B6;
+   font-family: 'Comfortaa', cursive;
+ }
+
+ .nav-item {
+   padding-top: 10px;
  }

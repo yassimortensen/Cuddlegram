@@ -1,5 +1,22 @@
-<h1> Welcome <%current_user.first_name %> </h1>
+<div class="padding">
+  <h1> Welcome, <%=current_user.first_name.titleize %> </h1>
 
-<% Pet.random_photo_for_each_pet.shuffle.each do |photo| %>
-  <%= link_to image_tag(photo.url), photo_path(photo) %>
-<% end %>
+  <% photos = Pet.random_photo_for_each_pet.shuffle %>
+    <body>
+      <main role = "main">
+        <div class = "album text-muted">
+          <div class="container">
+            <div class="row">
+              <% photos.each do |photo_object| %>
+              <div class="padding">
+                <div class="card">
+                  <img data-src="holder.js/100px280?theme=thumb" alt="Pet" style="height: 280px; width: 280px; display: block;" src="<%= photo_object.url %>" data-holder-rendered="true">
+                  <div class="center-text"><h5><%= photo_object.pet.instagram_handle %></h5></div>
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </body>
