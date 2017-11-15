@@ -2,7 +2,22 @@
 
 <% photos = Pet.random_photo_for_each_pet.shuffle %>
 
-<% photos.each do |photo_object| %>
-  <%= link_to image_tag(photo_object.url), photo_path(photo_object) %>
-  <h4><%= photo_object.pet.instagram_handle %></h4>
-<% end %>
+<body>
+<main role = "main">
+
+
+<div class = "album text-muted">
+  <div class="container">
+    <div class="row">
+      <% photos.each do |photo_object| %>
+        <div class="card">
+          <img data-src="holder.js/100px280?theme=thumb" alt="Pet" style="height: 280px; width: 280px; display: block;" src="<%= photo_object.url %>" data-holder-rendered="true">
+          <h4><%= photo_object.pet.instagram_handle %></h4>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</main>
+</body>
