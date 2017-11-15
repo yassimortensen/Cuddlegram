@@ -1,5 +1,11 @@
 <h1> <%= @pet.instagram_handle %> <h1>
 
+<%= form_for :like, url: likes_path do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :pet_id, value: @pet.id %>
+  <%= f.submit "Cuddle?" %>
+<% end %>
+
 <h3>Cuddlegram Followers:</h3>
   <% @pet.users.each do |follower| %>
     <ul>

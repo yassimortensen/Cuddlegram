@@ -16,4 +16,8 @@ class User < ApplicationRecord
     link
   end
 
+  def full_name
+    "#{self.first_name.titleize} #{self.last_name.titleize}"
+  end
+
 end

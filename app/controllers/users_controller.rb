@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   #before_action :require_action, only: [:index]
 
   def index
-    @users = User.all
+
   end
 
   def show
@@ -23,9 +23,6 @@ class UsersController < ApplicationController
       flash[:notice] = "Error: Sign up failed"
       render :new
     end
-  end
-
-  def user_pets
   end
 
 

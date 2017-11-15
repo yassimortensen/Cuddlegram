@@ -1,19 +1,21 @@
-<h2> <a href = "<%= @user.instagram_account_link%>"> <%= @user.instagram_handle%> </a> </h2>
 
-<br>
-<br>
-CUDDLES
+<h1> <a href = "<%= @user.instagram_account_link%>"> <%= @user.instagram_handle%> </a> </h1>
 <ul>
-  <% @user.pets.each do |pet| %>
-  <li> <%= link_to pet.instagram_handle, pet_path(pet) %> </li>
-  <% end %>
+  <li>Name: <%= @user.full_name %></li>
+  <li>Email:<%= @user.email %></li>
 </ul>
+<br>
 
-GALLERY
-<ul>
+<h2><%= link_to "Find a Pet to Cuddle With", new_like_path %></h2>
+<br>
+
+<h2>Following:</h2>
   <% @user.pets.each do |pet| %>
-    <% pet.photos.each do |photo| %>
-      <li> <%= link_to image_tag(photo.url), photo_path(photo) %>
-    <% end %>
+  <% profile_photo = pet.new_photo %>
+    <ul>
+      <li>
+        <%= link_to pet.instagram_handle, pet_path(pet) %><br>
+        <%= link_to image_tag(profile_photo.url), photo_path(profile_photo) %>
+      </li>
+    </ul>
   <% end %>
-  </ul
