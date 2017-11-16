@@ -13,6 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+ .center {
+   align-content: center;
+   padding-left: 115px;
+ }
+
+ .img-container {
+     position: relative;
+     width: 280px; /* whatever set width */
+     height: 280px;
+     overflow: hidden;
+ }
+
+ .img-container img {
+     height: 130%;
+     width: auto;
+     overflow: hidden;
+ }
+
 .padding{
   padding: 10px;
 }
@@ -30,7 +49,7 @@
 
  .email {
    padding-top: 10px;
-   padding-left: 210px;
+   padding-left: 550px;
  }
 
  .everywhere-else {

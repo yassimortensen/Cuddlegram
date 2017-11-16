@@ -10,8 +10,12 @@
               <% photos.each do |photo_object| %>
               <div class="padding">
                 <div class="card">
-                  <img data-src="holder.js/100px280?theme=thumb" alt="Pet" style="height: 280px; width: 280px; display: block;" src="<%= photo_object.url %>" data-holder-rendered="true">
-                  <div class="center-text"><h5><%= photo_object.pet.instagram_handle %></h5></div>
+                  <div class="img-container">
+                    <a href="/photos/<%=photo_object.id%>" >
+                      <img data-src="holder.js/100px280?theme=thumb" alt="Pet" src="<%= photo_object.url %>" data-holder-rendered="true">
+                    </a>
+                  </div>
+                  <div class="center-text"><h5><%= link_to photo_object.pet.instagram_handle, pet_path(photo_object.pet) %></h5></div>
                 </div>
               </div>
               <% end %>

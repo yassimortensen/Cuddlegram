@@ -1,11 +1,31 @@
-<h1> All of our Pets! </h1>
+<div class="padding">
+  <div class="center-text">
+    <h1> All of our Pets! </h1>
+  </div>
+</div>
 
-
-<% @pets.each do |pet| %>
-  <% photo = pet.new_photo %>
-  <ul>
-    <h3><li> <%= pet.instagram_handle %><br>
-      <%= link_to image_tag(photo.url), pet_path(pet) %>
-    </li></h3>
-  </ul>
-<% end %>
+<body>
+  <main role = "main">
+    <div class = "album text-muted">
+      <div class="container">
+        <div class="center">
+          <div class="row">
+            <% @pets.each do |pet| %>
+              <% photo = pet.new_photo %>
+              <div class="padding">
+                <div class="card">
+                  <div class="img-container">
+                    <a href="/photos/<%=photo.id%>">
+                      <img data-src="holder.js/100px280?theme=thumb" alt="Pet" src="<%= photo.url %>" data-holder-rendered="true">
+                    </a>
+                  </div>
+                  <div class="center-text"><h5><%= link_to photo.pet.instagram_handle, pet_path(photo.pet) %></h5></div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
