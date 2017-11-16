@@ -1,3 +1,16 @@
 // Place all the styles related to the Likes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.img-container-likes {
+    position: relative;
+    width: 400px; /* whatever set width */
+    height: 500px;
+    overflow: hidden;
+}
+
+.img-container-likes img {
+    height: 90%;
+    width: auto;
+    overflow: hidden;
+}

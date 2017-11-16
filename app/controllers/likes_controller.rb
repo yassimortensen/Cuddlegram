@@ -11,7 +11,7 @@ class LikesController < ApplicationController
     else
       like = Like.new(likes_params)
       if like.save
-        redirect_to user_path(likes_params[:user_id])
+        redirect_to new_like_path
       else
         render :new
       end

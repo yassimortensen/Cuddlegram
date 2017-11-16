@@ -7,11 +7,12 @@
 </ul>
 
 
-    <h3> Create a Cuddlegram Account </h3>
     <div class="container">
       <div class="row">
-        <div class="col-6">
-        <%= form_for @user do |f|  %>
+        <div class="col-6 text-nowrap">
+          <h2 class = "form-signin-heading"> Create a Cuddlegram Account </h2>
+
+          <%= form_for @user do |f|  %>
           <div class="form-group">
             <%= f.text_field :first_name, :placeholder => "first name" %>
           </div>
@@ -28,10 +29,9 @@
             <%= f.password_field :password, :placeholder => "password" %>
           </div>
           <div class="form-group">
-            <%= f.submit "Sign Up", class: "btn-submit" %>
+            <%= f.submit "Sign Up", class:"btn btn-info" %>
           </div>
           <% end %>
         </div>
       </div>
-
     </div>

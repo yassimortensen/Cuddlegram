@@ -61,6 +61,7 @@
  .landing-bg {
      background-image: url("https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/20583168_108299806540330_8006561059768893440_n.jpg");
      background-repeat: no-repeat;
+     background-size: cover;
      font-family: 'Comfortaa', cursive;
      color: #515A5A
  }

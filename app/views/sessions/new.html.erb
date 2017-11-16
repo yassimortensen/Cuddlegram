@@ -1,10 +1,13 @@
 <%= flash[:notice] %>
 <br>
 
+
 <div class="container">
 	<div class="row">
 		<div class="col-6 text-nowrap">
+
 			<h2 class="form-signin-heading">Log in</h2>
+
       	<%= form_for(:session, url: login_path) do |f| %>
 				<div class="form-group">
 					<%= f.email_field :email, :placeholder => "Email" %>
