@@ -73,3 +73,7 @@
  .nav-item {
    padding-top: 10px;
  }
+
+ div.custom-row {
+   float: left;
+  }

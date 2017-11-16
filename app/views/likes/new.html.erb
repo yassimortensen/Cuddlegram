@@ -1,29 +1,50 @@
-<h1>New Likes!</h1>
+<br>
+<br>
+<div class= "container">
+  <div class= "text-center row">
+  <br>
+  <% photo = @photos.shuffle.first %>
 
-<% photo = @photos.shuffle.first %>
-<h2><%= link_to photo.pet.instagram_handle, pet_path(photo.pet) %></h2>
-<%= link_to image_tag(photo.url), pet_path(photo.pet) %><br>
+  <div class="col">
+    <%= form_tag '/likes/new', method: 'get' do %>
+      <%= submit_tag "Shoo!", class:"btn btn-info" %>
+    <% end %>
+  </div>
+  <div class="col align-self-center">
+    <h2><%= link_to photo.pet.instagram_handle, pet_path(photo.pet) %></h2>
+      <%= link_to image_tag(photo.url), pet_path(photo.pet) %>
+  </div>
 
-<h4>Comments for this picture:</h4>
-  <% photo.comments.each do |comment| %>
-    <ul>
-      <li><%= comment.content %></li>
-    </ul>
+
+  <div class="col" style="vertical-align: middle">
+     <%= form_for :like, url: likes_path do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :pet_id, value: photo.pet.id %>
+      <%= f.submit "Cuddle?", class:"btn btn-info"%>
+    <% end %>
+  </div>
+
+  <br>
+  <br>
+</div>
+</div>
+
+
+<div class="text-center">
+
+  <%= form_for :comment, url: comments_path do |f| %>
+  <%= f.submit "Add a Comment" %>
+    <%= f.text_area :content %>
+    <%= f.hidden_field :photo_id, value: photo.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   <% end %>
 
-<%= form_for :like, url: likes_path do |f| %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.hidden_field :pet_id, value: photo.pet.id %>
-  <%= f.submit "Cuddle?" %>
-<% end %>
+  <h4>Comments</h4>
+    <% photo.comments.each do |comment| %>
+      <ul>
+        <li><%= comment.content %></li>
+      </ul>
+    <% end %>
+    <br>
 
-<%= form_tag '/likes/new', method: 'get' do %>
-  <%= submit_tag "Shoo!" %>
-<% end %>
-
-<%= form_for :comment, url: comments_path do |f| %>
-  <%= f.text_area :content %>
-  <%= f.hidden_field :photo_id, value: photo.id %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit "Add a Comment" %>
-<% end %>
+</div>
