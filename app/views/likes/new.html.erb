@@ -14,8 +14,8 @@
     </div>
 
     <div class="col align-self-center">
+      <h2><%= link_to photo.pet.instagram_handle, pet_path(photo.pet) %></h2>
       <div class="img-container-likes">
-        <h2><%= link_to photo.pet.instagram_handle, pet_path(photo.pet) %></h2>
         <a href= "/pets/<%=photo.pet_id%>"><img src="<%= photo.url%>"> </a>
       </div>
     </div>
@@ -30,10 +30,6 @@
   </div>
 </div>
 
-
-
-
-<br>
   <div class="text-center">
     <h4> Add a Comment! </h4>
 

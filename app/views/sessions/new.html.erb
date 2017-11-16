@@ -1,24 +1,33 @@
 <%= flash[:notice] %>
 <br>
-
-
 <div class="container">
-	<div class="row">
-		<div class="col-6 text-nowrap">
+	<div class="text-center row">
 
-			<h2 class="form-signin-heading">Log in</h2>
-
-      	<%= form_for(:session, url: login_path) do |f| %>
-				<div class="form-group">
-					<%= f.email_field :email, :placeholder => "Email" %>
+		<div class="col">
+			<div class="padding">
+				<div class="logo-container">
+					<img src="https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/20583168_108299806540330_8006561059768893440_n.jpg" alt="logo" style="opacity: 0.9;">
 				</div>
-				<div class="form-group">
-        	<%= f.password_field :password, :placeholder => "Password" %>
-				</div>
-				<div class="form-group">
-        	<%= f.submit "Log in", class: "btn btn-info" %>
-				</div>
-      <% end %>
+			</div>
 		</div>
+
+		<div class="col">
+			<div class="col-6 text-nowrap">
+				<br>
+				<h2 class="form-signin-heading">Log in</h2>
+			     <%= form_for(:session, url: login_path) do |f| %>
+					<div class="form-group">
+						<%= f.email_field :email, :placeholder => "Email" %>
+					</div>
+					<div class="form-group">
+			       <%= f.password_field :password, :placeholder => "Password" %>
+					</div>
+					<div class="form-group">
+			       <%= f.submit "Log in", class: "btn btn-info" %>
+					</div>
+			    <% end %>
+			</div>
+		</div>
+
 	</div>
 </div>

@@ -1,32 +1,37 @@
 <div class="padding">
-  <h1> <a href = "<%= @user.instagram_account_link%>"> <%= @user.instagram_handle%> </a> </h1>
-  <ul>
-    <li>Name: <%= @user.full_name %></li>
-    <li>Email: <%= @user.email %></li>
-  </ul>
-  <br>
+  <div class="center-text">
+    <h1><a href = "<%= @user.instagram_account_link%>"> <%= @user.instagram_handle%> </a></h1>
+    <p>
+      Name: <%= @user.full_name %><br>
+      Email: <%= @user.email %>
+    </p>
+  </div>
 
-  <body>
-    <main role = "main">
-      <div class = "album text-muted">
-        <div class="container">
-          <h2>Following:</h2>
-          <div class="row">
+  <div style="margin-left: auto; margin-right: auto; width: 70%; padding-left: 40px;">
+    <body>
+      <main role = "main">
+        <div class = "album text-muted">
+          <div class="container">
+            <h2>Following:</h2>
+            <div class="row">
               <% @user.pets.each do |pet| %>
                 <div class="padding">
                   <div class="card">
                     <div class="img-container">
+
                       <% profile_photo = pet.new_photo %>
                       <a href="/photos/<%=profile_photo.id%>">
                         <img data-src="holder.js/100px280?theme=thumb" alt="Pet" src="<%= profile_photo.url %>" data-holder-rendered="true">
                       </a>
+
                     </div>
                     <div class="center-text"><h5><%= link_to profile_photo.pet.instagram_handle, pet_path(profile_photo.pet) %></h5></div>
                   </div>
                 </div>
               <% end %>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-  </body>
+      </main>
+    </body>
+  </div>
