@@ -14,6 +14,21 @@
  *= require_self
  */
 
+ .textarea-new {
+   resize: both !important;
+ }
+
+ .comment {
+   width: 300px;
+   padding-bottom: 10px;
+ }
+
+ .center-content {
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
+
  .center {
    align-content: center;
    padding-left: 115px;
