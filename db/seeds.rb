@@ -42,14 +42,14 @@ User.create!(first_name: "miley", last_name: "cyrus", email:"miley@test.com", pa
 User.create!(first_name: "barack", last_name: "obama", email:"barack@test.com", password: "mermaids", instagram_handle: "barackobama")
 User.create!(first_name: "michelle", last_name: "obama", email:"michelle@test.com", password: "mermaids", instagram_handle: "michelleobama44")
 User.create!(first_name: "jennifer", last_name: "lopez", email:"jennifer@test.com", password: "mermaids", instagram_handle: "jlo")
-User.create!(first_name: "katy", last_name: "perry", email:"katy@test.com", password: "mermaids", instagram_handle: "jlo")
+User.create!(first_name: "katy", last_name: "perry", email:"katy@test.com", password: "mermaids", instagram_handle: "katyperry")
 User.create!(first_name: "dwayne", last_name: "johnson", email:"dwayne@test.com", password: "mermaids", instagram_handle: "therock")
 User.create!(first_name: "kendall", last_name: "jenner", email:"kendall@test.com", password: "mermaids", instagram_handle: "kendalljenner")
 
 
 #create likes
     100.times do
-      Like.create!(user_id: User.all.shuffle.first.id, pet_id: Pet.all.shuffle.first.id)
+      Like.find_or_create_by(user_id: User.all.shuffle.first.id, pet_id: Pet.all.shuffle.first.id)
     end
 
 #create comments
@@ -61,30 +61,6 @@ User.create!(first_name: "kendall", last_name: "jenner", email:"kendall@test.com
     "cutie patootie", "squishy face", "aaawwww", "precious", "LOVE", "looking so snuggly!", "fuzziness overload!!", "talk to the paw",
     "i want cuddles!!", "Oh my goodness!!!!", "that's so pawesome!!", "yea but what is it", "my spirit animal", "this is the best app ever"]
 
-  100.times do
+  200.times do
     Comment.create!(user_id: User.all.shuffle.first.id, photo_id: Photo.all.shuffle.first.id, content: contents.shuffle.first)
   end
-
-
-# #create comments
-# Comment.create!(content: "so cute!")
-# Comment.create!(content: "<3!")
-# Comment.create!(content: "FREAKIN ADORABLE")
-# Comment.create!(content: "TOO CUTE <3 <3 <3")
-# Comment.create!(content: ":)")
-# Comment.create!(content: "the cutest!")
-# Comment.create!(content: "so sweet")
-# Comment.create!(content: "j’adore <3")
-# Comment.create!(content: "lol!")
-# Comment.create!(content: "i just want to cuddle <3")
-# Comment.create!(content: "soooo UGLY its CUTE!")
-# Comment.create!(content: "too much")
-# Comment.create!(content: "ummmmmm sir?")
-# Comment.create!(content: "Lol there's so much cuteness going on in this pic.")
-# Comment.create!(content: "cutie patootie")
-# Comment.create!(content: "squishy face")
-# Comment.create!(content: "aaawwww")
-# Comment.create!(content: "precious")
-# Comment.create!(content: "LOVE")
-# Comment.create!(content: "looking so snuggly!")
-# Comment.create!(content: "fuzziness overload!!")
