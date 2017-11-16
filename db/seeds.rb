@@ -42,14 +42,14 @@ User.create!(first_name: "miley", last_name: "cyrus", email:"miley@test.com", pa
 User.create!(first_name: "barack", last_name: "obama", email:"barack@test.com", password: "mermaids", instagram_handle: "barackobama")
 User.create!(first_name: "michelle", last_name: "obama", email:"michelle@test.com", password: "mermaids", instagram_handle: "michelleobama44")
 User.create!(first_name: "jennifer", last_name: "lopez", email:"jennifer@test.com", password: "mermaids", instagram_handle: "jlo")
-User.create!(first_name: "katy", last_name: "perry", email:"katy@test.com", password: "mermaids", instagram_handle: "jlo")
+User.create!(first_name: "katy", last_name: "perry", email:"katy@test.com", password: "mermaids", instagram_handle: "katyperry")
 User.create!(first_name: "dwayne", last_name: "johnson", email:"dwayne@test.com", password: "mermaids", instagram_handle: "therock")
 User.create!(first_name: "kendall", last_name: "jenner", email:"kendall@test.com", password: "mermaids", instagram_handle: "kendalljenner")
 
 
 #create likes
     100.times do
-      Like.find_or_create_by!(user_id: User.all.shuffle.first.id, pet_id: Pet.all.shuffle.first.id)
+      Like.find_or_create_by(user_id: User.all.shuffle.first.id, pet_id: Pet.all.shuffle.first.id)
     end
 
 #create comments
@@ -62,5 +62,5 @@ User.create!(first_name: "kendall", last_name: "jenner", email:"kendall@test.com
     "i want cuddles!!", "Oh my goodness!!!!", "that's so pawesome!!", "yea but what is it", "my spirit animal", "this is the best app ever"]
 
   200.times do
-    Comment.find_or_create_by!(user_id: User.all.shuffle.first.id, photo_id: Photo.all.shuffle.first.id, content: contents.shuffle.first)
+    Comment.create!(user_id: User.all.shuffle.first.id, photo_id: Photo.all.shuffle.first.id, content: contents.shuffle.first)
   end
