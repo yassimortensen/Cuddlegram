@@ -3,7 +3,7 @@
 # Welcome to Cuddlegram!
 
 Cuddlegram is a WebApp that makes it easy to find new, cute animal instagram accounts to cuddle with. The app allows users to:
-  - create and login to an account with a username and password.
+  - Create and login to an account with a username and password.
   - Be greeted with a homepage showing images from pet instagram accounts that change with each refresh.
   - Use a navigation bar to navigate throughout the site.
   - Click "Find New Pets" to find a new pet cuddlegram account to follow! A random image from a pet instagram account is displayed for the user, and the user can choose to "cuddle" right, or "shoo!" left.
@@ -15,9 +15,9 @@ Cuddlegram is a WebApp that makes it easy to find new, cute animal instagram acc
 
 ## GETTING STARTED ##
 
-All of the gems you need to install are in the the Gemfile. Run the command `bundle install` in your terminal.
+- All of the gems you need to install are in the the Gemfile. Run the command `bundle install` in your terminal.
 
-Some gems required:
+- Some gems required:
   - Nokogiri and Open-URI: used to scrape images from www.Webtsa.me
 
 
@@ -27,10 +27,10 @@ Some gems required:
 
 ## AUTHORS ##
 
-Mimi Rahman - https://github.com/mrahman1
-Yassi Mortensen - https://github.com/yassimortensen
+- Mimi Rahman - https://github.com/mrahman1
+- Yassi Mortensen - https://github.com/yassimortensen
 
 
 ## LICENSE ##
-Styled with the Bootstrap framework and added CSS
-Cuddlegram is released under the WeWork License.
+- Styled with the Bootstrap framework and added CSS
+- Cuddlegram is released under the WeWork License.
